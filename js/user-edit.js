@@ -25,7 +25,7 @@ $(function() {
   });
   $("#remove_akari").click(function() {
     if ($("#member_list_remove > #akari").size() === 0) {
-      return $("#member_list_remove").after($("<div>").attr("class", "alert alert-error fade in").text("あかりさんは削除済みです。").append($("<button>").attr("class", "close").attr("data-dismiss", "alert").html("&times;")));
+      return myAlert($("#member_list_remove"), "あかりさんは削除済みです。");
     } else {
       return $("#member_list_remove > #akari").remove();
     }

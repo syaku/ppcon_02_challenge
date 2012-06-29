@@ -22,7 +22,7 @@ $ ->
   # 問題3
   $("#remove_akari").click ->
     if $("#member_list_remove > #akari").size() == 0
-     $("#member_list_remove").after($("<div>").attr("class", "alert alert-error fade in").text("あかりさんは削除済みです。").append($("<button>").attr("class", "close").attr("data-dismiss", "alert").html("&times;")))
+      myAlert $("#member_list_remove"), "あかりさんは削除済みです。"
     else
       $("#member_list_remove > #akari").remove()
 
